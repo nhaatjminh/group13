@@ -1,0 +1,39 @@
+
+<div class="container">
+
+        <div class="row">
+            <div class="col-md-2">
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item" id="Samsung"><a href="/Products/Samsung">Samsung</a></li>
+                    <li class="list-group-item" id="Sony"><a href="/Products/Sony">Sony</a></li>
+                    <li class="list-group-item" id="Panasonic"><a href="/Products/Panasonic">Panasonic</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <div id="products" class="row list-group">
+                    {{!--  --}}
+                    {{#each Products}}
+                    <div class="item col-xs-4 col-lg-4" id="{{title}}">
+                        <div class="thumbnail">
+                            <img class="group list-group-image" src="/images/{{imagePath}}" alt="">
+                            <div class="caption">
+                                <h4 class="group inner list-group-item-heading">{{title}}</h4>
+                                <p class="group inner list-group-item-text">{{description}}.</p>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+                                        <p class="lead">{{price}} VNĐ</p>
+                                    </div>
+                                    <div class="col-xs-12 col-md-6">
+                                        <a class="btn btn-success" href="#">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{!--  --}}
+
+                </div>
+            </div>
+        </div>
+    </div>
